@@ -242,7 +242,7 @@
     $sql .= "'" . $salesperson['first_name'] . "',";
     $sql .= "'" . $salesperson['last_name'] . "',";
     $sql .= "'" . $salesperson['email'] . "',";
-    $sql .= "'" . $salesperson['phone'] . "',";
+    $sql .= "'" . $salesperson['phone']. "' ";
 
     $sql .= ");";
 
@@ -274,7 +274,7 @@
     $sql .= "first_name='" . $salesperson['first_name'] . "', ";
     $sql .= "last_name='" . $salesperson['last_name'] . "', ";
     $sql .= "email='" . $salesperson['email'] . "', ";
-    $sql .= "username='" . $salesperson['username'] . "' ";
+    $sql .= "phone='" . $salesperson['phone'] . "' ";
     $sql .= "WHERE id='" . $salesperson['id'] . "' ";
     $sql .= "LIMIT 1;";
     // For update_salesperson statments, $result is just true/false
