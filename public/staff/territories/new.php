@@ -5,8 +5,8 @@ require_once('../../../private/initialize.php');
 $errors = array();
 $territory = array(
   'name' => '',
-  'state_id' => 0,
-  'position' => 0
+  'state_id' => '',
+  'position' => ''
 );
 
 if(is_post_request()){

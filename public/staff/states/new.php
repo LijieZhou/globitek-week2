@@ -6,7 +6,7 @@ $errors = array();
 $state = array(
   'name' => '',
   'code' => '',
-  'country_id' => 0
+  'country_id' => ''
 );
 
 if(is_post_request()){

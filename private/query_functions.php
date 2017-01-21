@@ -50,17 +50,24 @@
       $errors[] = "State cannot be blank.";
     } elseif (!has_length($state['name'], array('min' => 2, 'max' => 255))) {
       $errors[] = "State must be between 2 and 255 characters.";
+    } elseif(!has_valid_name($state['name'])){
+      $errors[] = "State name can only contain A-Z, a-z, and space";
     }
 
     if (is_blank($state['code'])) {
       $errors[] = "Code cannot be blank.";
     } elseif (!has_length($state['code'], array('min' => 2, 'max' => 255))) {
       $errors[] = "Code must be between 2 and 255 characters.";
+    } elseif(!has_valid_code($state['code'])){
+      $errors[] = "Code must be Capital Letters.";
     }
 
     if (is_blank($state['country_id'])) {
-      $errors[] = "Email cannot be blank.";
+      $errors[] = "Country Id cannot be blank.";
+    }elseif(!has_valid_country_id($state['country_id'])){
+      $errors[] = "Country Id must be a positive integer number less than 1000.";
     }
+
 
     return $errors;
   }
@@ -167,14 +174,20 @@
       $errors[] = "Name cannot be blank.";
     } elseif (!has_length($territory['name'], array('min' => 2, 'max' => 255))) {
       $errors[] = "Name must be between 2 and 255 characters.";
+    } elseif(!has_valid_name($territory['name'])){
+      $errors[] = "Name can only contain A-Z, a-z, and space";
     }
 
     if (is_blank($territory['state_id'])) {
       $errors[] = "State Id cannot be blank.";
+    }elseif(!has_valid_state_id($territory['state_id'])){
+      $errors[] = "State Id can only be a positive integer, less than 1000";
     }
 
     if (is_blank($territory['position'])) {
       $errors[] = "Position cannot be blank.";
+    }elseif(!has_valid_position($territory['position'])){
+      $errors[] = "Position can only be a positive integer between 1 and 99";
     }
 
     return $errors;

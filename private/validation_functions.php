@@ -26,7 +26,7 @@
     // return strpos($value, '@') !== false;
       if(filter_var($value, FILTER_VALIDATE_EMAIL) !== false){
         return true;
-      }  
+      }
   }
 
   //has_valid_user_name
@@ -40,5 +40,44 @@
   function has_valid_phone_number($value){
     return preg_match("/^[0-9-() ']+$/ ", $value);
   }
+
+  //Optional Validation Rule #1 has_valid_country_id
+  //Valid country_id can only be a positive integer, less than 1000
+  function has_valid_country_id($value){
+    if($value>0 && $value<1000){
+      return true;
+    }
+  }
+
+  //Optional Validation Rule #2 has_valid_code
+  //Valid code can only contain Capital letters
+  function has_valid_code($value){
+    return preg_match("/^[A-Z]+$/ ", $value);
+  }
+
+  //Optional Validation Rule #3 has_valid_state_id
+  //Valid State_id can only be a positive integer, less than 1000
+  function has_valid_state_id($value){
+    if($value>0 && $value<1000){
+      return true;
+    }
+  }
+
+  //Optional Validation Rule #4 has_valid_position
+  //Valid position can only be a positive intefer, less than 100
+  function has_valid_position($value){
+    if($value > 0 && $value < 100){
+      return true;
+    }
+  }
+
+  //Optional Validation Rule #5 has_valid_user_name
+  //Valid name (including state name and territory name) can only contain A-Z, a-z, -
+  function has_valid_name($value){
+    return preg_match("/^[A-Za-z-']+$/ ", $value);
+  }
+
+
+
 
 ?>
