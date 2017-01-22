@@ -33,18 +33,18 @@ if(is_post_request()){
 <div id="main-content">
   <a href="index.php">Back to States List</a><br />
 
-  <h1>Edit State: <?php echo $state['name']; ?></h1>
+  <h1>Edit State: <?php echo htmlspecialchars($state['name']); ?></h1>
 
   <!-- TODO add form -->
   <?php echo display_errors($errors); ?>
 
-  <form action="edit.php?id=<?php echo $state['id']; ?>" method="post">
+  <form action="edit.php?id=<?php echo htmlspecialchars($state['id']); ?>" method="post">
     Name:<br />
-    <input type="text" name="name" value="<?php echo $state['name']; ?>" /><br />
+    <input type="text" name="name" value="<?php echo htmlspecialchars($state['name']); ?>" /><br />
     Code:<br />
-    <input type="text" name="code" value="<?php echo $state['code']; ?>" /><br />
+    <input type="text" name="code" value="<?php echo htmlspecialchars($state['code']); ?>" /><br />
     Country Id:<br />
-    <input type="text" name="country_id" value="<?php echo $state['country_id']; ?>" /><br />
+    <input type="text" name="country_id" value="<?php echo htmlspecialchars($state['country_id']); ?>" /><br />
     <br />
     <input type="submit" name="submit" value="Update"  />
   </form>

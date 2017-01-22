@@ -22,20 +22,20 @@ $state = db_fetch_assoc($state_result);
     echo "<table id=\"state\">";
     echo "<tr>";
     echo "<td>Name: </td>";
-    echo "<td>" . $state['name'] . "</td>";
+    echo "<td>" . htmlspecialchars($state['name']) . "</td>";
     echo "</tr>";
     echo "<tr>";
     echo "<td>Code: </td>";
-    echo "<td>" . $state['code'] . "</td>";
+    echo "<td>" . htmlspecialchars($state['code']) . "</td>";
     echo "</tr>";
     echo "<tr>";
     echo "<td>Country ID: </td>";
-    echo "<td>" . $state['country_id'] . "</td>";
+    echo "<td>" . htmlspecialchars($state['country_id']) . "</td>";
     echo "</tr>";
     echo "</table>";
 ?>
     <br />
-    <a href="edit.php?id=<?php echo $state['id']; ?>">Edit</a><br />
+    <a href="edit.php?id=<?php echo htmlspecialchars($state['id']); ?>">Edit</a><br />
     <hr />
 
     <h2>Territories</h2>
@@ -48,8 +48,8 @@ $state = db_fetch_assoc($state_result);
     echo "<ul id=\"territories\">";
     while($territory = db_fetch_assoc($territory_result)) {
       echo "<li>";
-      echo "<a href=\"#add_a_url\">";
-      echo $territory['name'];
+      echo "<a href=\"../territories/show.php?id=1\">";
+      echo htmlspecialchars($territory['name']);
       echo "</a>";
       echo "</li>";
     } // end while $territory
