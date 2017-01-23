@@ -178,11 +178,7 @@
       $errors[] = "Name can only contain A-Z, a-z, and space";
     }
 
-    if (is_blank($territory['state_id'])) {
-      $errors[] = "State Id cannot be blank.";
-    }elseif(!has_valid_state_id($territory['state_id'])){
-      $errors[] = "State Id can only be a positive integer, less than 1000";
-    }
+    
 
     if (is_blank($territory['position'])) {
       $errors[] = "Position cannot be blank.";
