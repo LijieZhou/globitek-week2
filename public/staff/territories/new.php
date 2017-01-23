@@ -10,8 +10,7 @@ $territory = array(
   'state_id' => 0,
   'position' => ''
 );
-// echo "This is the newid";
-// echo $_GET['id'];
+
 
 
 if(is_post_request()){
@@ -23,7 +22,7 @@ if(is_post_request()){
   $result = insert_territory($territory);
   if($result === true){
     $new_id = db_insert_id($db);
-    
+
     redirect_to('show.php?id=' . $new_id);
 
   }else{

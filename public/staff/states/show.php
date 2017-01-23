@@ -48,7 +48,7 @@ $state = db_fetch_assoc($state_result);
     echo "<ul id=\"territories\">";
     while($territory = db_fetch_assoc($territory_result)) {
       echo "<li>";
-      echo "<a href=\"../territories/show.php?id=1\">"; //need to be fixed
+      echo '<a href= "../territories/show.php?id=' .$territory['id'].' " >'  ;
       echo htmlspecialchars($territory['name']);
       echo "</a>";
       echo "</li>";
