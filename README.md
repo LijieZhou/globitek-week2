@@ -36,20 +36,20 @@ The following **required** functionality is completed:
   * [x]  Required: Validate that usernames contain only the whitelisted characters.
   * [x]  Required: Validate that phone numbers contain only the whitelisted characters.
   * [ ]  Required: Validate that email addresses contain only whitelisted characters.
-  * [ ]  Required: Add *at least 5* other validations of your choosing.
+  * [x]  Required: Add *at least 5* other validations of your choosing.
 
-8\. [ ]  Required: Sanitization
-  * [ ]  Required: All input and dynamic output should be sanitized.
-  * [ ]  Required: Sanitize dynamic data for URLs
-  * [ ]  Required: Sanitize dynamic data for HTML
-  * [ ]  Required: Sanitize dynamic data for SQL
+8\. [x]  Required: Sanitization
+  * [x]  Required: All input and dynamic output should be sanitized.
+  * [x]  Required: Sanitize dynamic data for URLs
+  * [x]  Required: Sanitize dynamic data for HTML
+  * [x]  Required: Sanitize dynamic data for SQL
 
-9\. [ ]  Required: Penetration Testing
-  * [ ]  Required: Verify form inputs are not vulnerable to SQLI attacks.
-  * [ ]  Required: Verify query strings are not vulnerable to SQLI attacks.
-  * [ ]  Required: Verify form inputs are not vulnerable to XSS attacks.
-  * [ ]  Required: Verify query strings are not vulnerable to XSS attacks.
-  * [ ]  Required: Listed other bugs or security vulnerabilities
+9\. [x]  Required: Penetration Testing
+  * [x]  Required: Verify form inputs are not vulnerable to SQLI attacks.
+  * [x]  Required: Verify query strings are not vulnerable to SQLI attacks.
+  * [x]  Required: Verify form inputs are not vulnerable to XSS attacks.
+  * [x]  Required: Verify query strings are not vulnerable to XSS attacks.
+  * [x]  Required: Listed other bugs or security vulnerabilities
 
 
 The following advanced user stories are optional:
