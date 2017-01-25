@@ -21,10 +21,11 @@
 
   // has_valid_email_format('test@test.com')
   function has_valid_email_format($value) {
-    // Function can be improved later to check for
-    // more than just '@'.
-    // return strpos($value, '@') !== false;
-      if(filter_var($value, FILTER_VALIDATE_EMAIL) !== false){
+    //FILTER_VALIDATE_EMAIL is ONLY responsible for verifying valid email based on RFC5321
+    //Need to use preg_match to whitelist special characters
+    //- need to be placed at the start or end of []
+    //Otherwise it will be interpretted as range
+      if(filter_var($value, FILTER_VALIDATE_EMAIL) !== false && preg_match("/^[-A-Za-z0-9_@.']+$/ ", $value)){
         return true;
       }
   }
@@ -74,7 +75,7 @@
   //Optional Validation Rule #5 has_valid_user_name
   //Valid name (including state name and territory name) can only contain A-Z, a-z, -
   function has_valid_name($value){
-    return preg_match("/^[A-Za-z-']+$/ ", $value);
+    return preg_match("/^[A-Za-z- ']+$/ ", $value);
   }
 
 

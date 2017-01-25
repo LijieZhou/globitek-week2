@@ -35,7 +35,7 @@ The following **required** functionality is completed:
   * [x]  Required: Validate that all string values are less than 255 characters.
   * [x]  Required: Validate that usernames contain only the whitelisted characters.
   * [x]  Required: Validate that phone numbers contain only the whitelisted characters.
-  * [ ]  Required: Validate that email addresses contain only whitelisted characters.
+  * [x]  Required: Validate that email addresses contain only whitelisted characters.
   * [x]  Required: Add *at least 5* other validations of your choosing.
 
 8\. [x]  Required: Sanitization
@@ -69,17 +69,20 @@ The following advanced user stories are optional:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/WQnIrGo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<a href="http://imgur.com/qk9tEFo"><img src="http://i.imgur.com/qk9tEFo.gif?1" title="Pen Testing" /></a>
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The biggest challenge is to figure out how to pass the State_id through url to territory.
+I am still working on the optional features. I will come back to finish the optional after I finish Week 4 required.
 
 ## License
 
-    Copyright [Lijie Zhou]
+    Copyright [2017] [Lijie Zhou]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
