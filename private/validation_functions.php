@@ -78,7 +78,15 @@
     return preg_match("/^[A-Za-z- ']+$/ ", $value);
   }
 
-
+  //Bonus: unique username
+  function is_unique_username($value){
+    global $db;
+    $sql = "SELECT * FROM users WHERE username=  $value  ;";
+    $result = $db->query($sql);
+    if ($result['num_rows'] >0){
+      return false;
+    }
+  }
 
 
 ?>

@@ -82,7 +82,6 @@
       return $errors;
     }
 
-    // TODO add SQL
     $sql = "INSERT INTO states ";
     $sql .= "(name, code, country_id) ";
     $sql .= "VALUES (";
@@ -178,7 +177,7 @@
       $errors[] = "Name can only contain A-Z, a-z, and space";
     }
 
-    
+
 
     if (is_blank($territory['position'])) {
       $errors[] = "Position cannot be blank.";
@@ -444,6 +443,8 @@
       $errors[] = "Username must be less than 255 characters.";
     } elseif (!has_valid_user_name($user['username'])) {
       $errors[] = "Username can only contain A-Z, a-z, 0-9 and _";
+    } elseif (!is_unique_username($user['username'])) {
+      $errors[] = "Need unique username";
     }
     return $errors;
   }
@@ -453,7 +454,9 @@
   function insert_user($user) {
     global $db;
 
+
     $errors = validate_user($user);
+    // $errors = is_unique_username($user['username']);
     if (!empty($errors)) {
       return $errors;
     }
